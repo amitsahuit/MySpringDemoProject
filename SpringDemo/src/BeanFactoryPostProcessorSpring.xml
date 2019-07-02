@@ -10,8 +10,8 @@
 	</bean> 
 	
 	<bean id="FirstPoint" class="com.amit.javaSpringBeanFactoryPostProcessor.Point">
-		<property name="x" value ="0"/>
-		<property name="y" value ="0"/>
+		<property name="x" value ="${pointA.pointX}"/>
+		<property name="y" value ="${pointA.pointY}"/>
 	</bean>
 	
 	<bean id="SecondPoint" class="com.amit.javaSpringBeanFactoryPostProcessor.Point">
@@ -25,5 +25,9 @@
 	</bean>
 	
 	<bean class="com.amit.javaSpringBeanFactoryPostProcessor.DisplayNameBeanFactoryPostProcessor" />
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="PointsConfig.properties"/>
+	</bean>
 	
 </beans>
