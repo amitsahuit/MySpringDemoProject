@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+	<bean id='triangle' class='com.amit.javaSpringWithRequiredAnnotation.Triangle'>
+		<property name="pointA" ref="FirstPoint"/>
+		<property name="pointB" ref="SecondPoint"/>
+		<property name="pointC" ref="ThirdPoint"/>
+	</bean> 
+	
+	<bean id="FirstPoint" class="com.amit.javaSpringWithRequiredAnnotation.Point">
+		<property name="x" value ="0"/>
+		<property name="y" value ="0"/>
+	</bean>
+	
+	<bean id="SecondPoint" class="com.amit.javaSpringWithRequiredAnnotation.Point">
+		<property name="x" value ="-20"/>
+		<property name="y" value ="0"/>
+	</bean>
+	
+	<bean id="ThirdPoint" class="com.amit.javaSpringWithRequiredAnnotation.Point">
+		<property name="x" value ="20"/>
+		<property name="y" value ="0"/>
+	</bean>
+
+	<bean id='circle' class='com.amit.javaSpringWithRequiredAnnotation.Circle'>
+		<!-- <property name="center" ref="FirstPoint" />/ -->
+	</bean> 	
+	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+	
+</beans>
+
