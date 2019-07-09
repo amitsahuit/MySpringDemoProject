@@ -7,7 +7,7 @@ public class DrawingApp {
 
 	public static void main(String[] args) {
 
-		AbstractApplicationContext context = new ClassPathXmlApplicationContext("JSR250AnnotationsSpring.xml");
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("StereotypeAnnotationsSpring.xml");
 		context.registerShutdownHook();
 		
 		Shape shape = (Shape) context.getBean("circle");
