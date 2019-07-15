@@ -1,20 +1,15 @@
-package com.amit.javaSpringWithStereotypeAnnotations;
+package com.amit.javaSpringMessageSourceFromPropertyFile;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
-import org.springframework.stereotype.Component;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.stereotype.Repository;
-//import org.springframework.stereotype.Service;
 
-@Component
-//@Service
-//@Repository
-//@Controller
+import org.springframework.context.MessageSource;
+
 public class Circle implements Shape{
 
 	private Point center;
+	private MessageSource messagesource;
 	
 	public Point getCenter() {
 		return center;
