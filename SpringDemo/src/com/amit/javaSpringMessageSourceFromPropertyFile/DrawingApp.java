@@ -13,7 +13,7 @@ public class DrawingApp {
 		Shape shape = (Shape) context.getBean("circle");
 		shape.draw();
 		
-		System.out.println(context.getMessage("greeting", null, "default greeting", null));
+		//System.out.println(context.getMessage("greeting", null, "default greeting", null));
 		
 	}
 }
